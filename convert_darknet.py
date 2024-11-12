@@ -13,7 +13,7 @@ def main(cfg_file, namesfile, weight_file, batch_size):
 
 if __name__ == "__main__":
     print("Converting to ONNX")
-    if len(sys.argv) == 5:
+    if len(sys.argv) == 4:
         cfg_file = sys.argv[1]
         weight_file = sys.argv[2]
         batch_size = int(sys.argv[3])
