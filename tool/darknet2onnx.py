@@ -38,7 +38,7 @@ def transform_to_onnx(cfgfile, weightfile, batch_size=1, onnx_file_name=None):
 
     else:
         x = torch.randn((batch_size, 3, model.height, model.width), requires_grad=True)
-        onnx_file = f"{onnx_file}_static.onnx".format(batch_size, model.height, model.width)
+        onnx_file = f"{onnx_file_name}_static.onnx".format(batch_size, model.height, model.width)
         torch.onnx.export(model,
                           x,
                           onnx_file,
