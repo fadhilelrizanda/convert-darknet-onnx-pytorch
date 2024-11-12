@@ -1,7 +1,7 @@
 import sys
 from tool.darknet2onnx import *
 
-def main(cfg_file, namesfile, weight_file, batch_size):
+def main(cfg_file, weight_file, batch_size):
     if batch_size <= 0:
         # Transform to ONNX with dynamic batch size
         onnx_path_demo = transform_to_onnx(cfg_file, weight_file, batch_size)
