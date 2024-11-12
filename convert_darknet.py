@@ -18,6 +18,6 @@ if __name__ == "__main__":
         weight_file = sys.argv[2]
         batch_size = int(sys.argv[3])
         main(cfg_file, weight_file, batch_size)
-    else:
+    else:   
         print('Please run this way:\n')
         print('  python convert_darknet.py <cfgFile> <weightFile> <batchSize>')
