@@ -15,10 +15,9 @@ if __name__ == "__main__":
     print("Converting to ONNX")
     if len(sys.argv) == 5:
         cfg_file = sys.argv[1]
-        namesfile = sys.argv[2]
-        weight_file = sys.argv[3]
-        batch_size = int(sys.argv[4])
-        main(cfg_file, namesfile, weight_file, batch_size)
+        weight_file = sys.argv[2]
+        batch_size = int(sys.argv[3])
+        main(cfg_file, weight_file, batch_size)
     else:
         print('Please run this way:\n')
-        print('  python convert_darknet.py <cfgFile> <namesFile> <weightFile> <batchSize>')
+        print('  python convert_darknet.py <cfgFile> <weightFile> <batchSize>')
